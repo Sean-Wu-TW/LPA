@@ -1,0 +1,54 @@
+
+
+*** plz set aws credentials to env variable before going!!! ***
+export AWS_ACCESS_KEY_ID=AKIA4JX6VQEGVSD7B2NX
+export AWS_SECRET_ACCESS_KEY=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
+
+** printenv **
+
+
+AWS cridential
+https://medium.com/@codelovingyogi/pyspark-connect-to-aws-s3a-filesystem-82bee54e0812
+
+
+show all files in s3 (costs$$)
+aws s3 ls s3://commoncrawl/crawl-data/CC-MAIN-2016-18/segments/1461864953696.93/wat/
+
+
+*** this works ***
+s3a://commoncrawl/crawl-data/CC-MAIN-2020-24/segments/1590348526471.98/wat/*.gz
+aws s3 ls s3://commoncrawl/crawl-data/CC-MAIN-2016-18/segments/1461864953696.93/wat/
+s3a://commoncrawl/crawl-data/CC-MAIN-2016-18/segments/*/wat/*.gz
+
+*** script is at docs.py ***
+
+
+*** use this for cmd config ***
+Start pyspark in CLI with:
+pyspark --packages=org.apache.hadoop:hadoop-aws:2.7.3
+
+
+*** use this to standalone config ***
+https://stackoverflow.com/questions/41375308/cant-find-module-graphframes
+spark = SparkSession \
+    .builder \
+    .appName("Python Spark basic example") \
+    .master("local[*]") \
+    .config("spark.jars.packages", "graphframes:graphframes:0.3.0-spark2.0-s_2.11") \
+    .getOrCreate()
+
+*** to stop a running port on jupyter notebook ***
+jupyter notebook stop 8888
+
+
+*** crawl-data structure ***
+.
+├── crawl-data
+│   └── CC-MAIN-2016-07
+│       └── segments
+│           └── 1454702039825.90
+│               └── wat
+├── segment.paths.gz
+├── warc.paths.gz
+├── wat.paths.gz
+└── wet.paths.gz

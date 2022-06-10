@@ -1,0 +1,21 @@
+https://commoncrawl.s3.amazonaws.com/crawl-data/CC-MAIN-2019-04/segments/1547584547882.77/wet/CC-MAIN-20190124121622-20190124143622-00628.warc.wet.gz
+
+
+
+https://commoncrawl.s3.amazonaws.com/crawl-data/CC-MAIN-2019-51/segments/1575541319511.97/warc/CC-MAIN-20191216093448-20191216121448-00531.warc.gz
+
+
+
+https://commoncrawl.s3.amazonaws.com/crawl-data/CC-MAIN-2020-10/segments/1581875149238.97/wet/CC-MAIN-20200229114448-20200229144448-00540.cdx.gz
+
+https://commoncrawl.s3.amazonaws.com/crawl-data/CC-MAIN-2016-07/segments/1454701145519.33/wat/CC-MAIN-20160205193905-00000-ip-10-236-182-209.ec2.internal.warc.wat.gz
+
+s3://crawl-data/CC-MAIN-2016-07/segments/1454701145519.33/wat/CC-MAIN-20160205193905-00000-ip-10-236-182-209.ec2.internal.warc.wat.gz
+
+
+*** this works ***
+s3a://commoncrawl/crawl-data/CC-MAIN-2020-24/segments/1590348526471.98/wat/
+
+aws s3 ls s3://commoncrawl/crawl-data/CC-MAIN-2020-24/segments/1590348526471.98/wat/
+
+s3a://commoncrawl/crawl-data/CC-MAIN-2016-07/segments/*/wat/*.gz
